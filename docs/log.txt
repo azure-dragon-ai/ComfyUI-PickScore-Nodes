@@ -1,0 +1,28 @@
+Error occurred when executing ZuellniPickScoreLoader:
+
+HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /yuvalkirstain/PickScore_v1/resolve/main/tf_model.h5 (Caused by ConnectTimeoutError(, 'Connection to huggingface.co timed out. (connect timeout=10)'))
+
+File "C:\Work\SD-ComfyUI\ComfyUI\execution.py", line 154, in recursive_execute
+output_data, output_ui = get_output_data(obj, input_data_all)
+File "C:\Work\SD-ComfyUI\ComfyUI\execution.py", line 84, in get_output_data
+return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+File "C:\Work\SD-ComfyUI\ComfyUI\execution.py", line 77, in map_node_over_list
+results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+File "C:\Work\SD-ComfyUI\ComfyUI\custom_nodes\ComfyUI-PickScore-Nodes\pickscore.py", line 24, in load
+model = AutoModel.from_pretrained(path, torch_dtype=dtype).eval().to(device)
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\transformers\models\auto\auto_factory.py", line 565, in from_pretrained
+return model_class.from_pretrained(
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\transformers\modeling_utils.py", line 2949, in from_pretrained
+if has_file(pretrained_model_name_or_path, TF2_WEIGHTS_NAME, **has_file_kwargs):
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\transformers\utils\hub.py", line 647, in has_file
+r = requests.head(url, headers=headers, allow_redirects=False, proxies=proxies, timeout=10)
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\requests\api.py", line 100, in head
+return request("head", url, **kwargs)
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\requests\api.py", line 59, in request
+return session.request(method=method, url=url, **kwargs)
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\requests\sessions.py", line 587, in request
+resp = self.send(prep, **send_kwargs)
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\requests\sessions.py", line 701, in send
+r = adapter.send(request, **kwargs)
+File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\requests\adapters.py", line 553, in send
+raise ConnectTimeout(e, request=request)
