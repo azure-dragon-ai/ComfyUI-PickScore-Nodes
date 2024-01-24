@@ -26,3 +26,33 @@ File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\requests\sessions.py",
 r = adapter.send(request, **kwargs)
 File "C:\Work\SD-ComfyUI\python_embeded\lib\site-packages\requests\adapters.py", line 553, in send
 raise ConnectTimeout(e, request=request)
+
+python_embeded\python.exe -m pip install turtle -i https://pypi.douban.com/simple/
+WARNING: Ignoring invalid distribution -pencv-python (c:\work\sd-comfyui\python_embeded\lib\site-packages)
+WARNING: Ignoring invalid distribution -rotobuf (c:\work\sd-comfyui\python_embeded\lib\site-packages)
+Looking in indexes: https://pypi.douban.com/simple/
+Collecting turtle
+  Downloading https://mirrors.cloud.tencent.com/pypi/packages/ff/f0/21a42e9e424d24bdd0e509d5ed3c7dfb8f47d962d9c044dba903b0b4a26f/turtle-0.0.2.tar.gz (11 kB)
+  Preparing metadata (setup.py) ... error
+  error: subprocess-exited-with-error
+
+  × python setup.py egg_info did not run successfully.
+  │ exit code: 1
+  ╰─> [7 lines of output]
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "C:\Users\AI-Space002\AppData\Local\Temp\pip-install-kawqxhta\turtle_aa44016c48b641d68a687bbc1f446df6\setup.py", line 40
+          except ValueError, ve:
+                 ^^^^^^^^^^^^^^
+      SyntaxError: multiple exception types must be parenthesized
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+error: metadata-generation-failed
+
+× Encountered error while generating package metadata.
+╰─> See above for output.
+
+note: This is an issue with the package mentioned above, not pip.
+hint: See above for details.
