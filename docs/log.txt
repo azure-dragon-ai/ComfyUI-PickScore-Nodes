@@ -99,3 +99,18 @@ ComfyUI-PickScore-Nodes      was-node-suite-comfyui
 ComfyUI-Portrait-Maker
 comfyui_controlnet_aux
 ComfyUI_IPAdapter_plus
+
+Error occurred when executing HaojihuiHPSv2ImageProcessor:
+
+Cannot handle this data type: (1, 1, 768), |u1
+
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 154, in recursive_execute
+output_data, output_ui = get_output_data(obj, input_data_all)
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 84, in get_output_data
+return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 77, in map_node_over_list
+results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+File "C:\Work\SD-ComfyUI\ComfyUI\custom_nodes\ComfyUI-HPSv2-Nodes\hpsv2.py", line 77, in process
+image = Image.fromarray(image)
+File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\PIL\Image.py", line 3083, in fromarray
+raise TypeError(msg) from e
