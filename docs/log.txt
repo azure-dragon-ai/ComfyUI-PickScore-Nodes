@@ -86,3 +86,16 @@ File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 77, in map_node_over_list
 results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
 File "C:\Work\SD-ComfyUI\ComfyUI\custom_nodes\ComfyUI-HPSv2-Nodes\hpsv2.py", line 71, in process
 image = Image.fromarray(numpy())
+
+CharacterFaceSwap            ComfyUI-WD14-Tagger
+ComfyUI-AnimateDiff-Evolved  ComfyUI_ADV_CLIP_emb
+ComfyUI-ExLlama              ComfyUI_experiments
+ComfyUI-ExLlama-Nodes        ComfyUI_smZNodes
+ComfyUI-HPSv2-Nodes          IPAdapter-ComfyUI
+ComfyUI-Impact-Pack          comfy_clip_blip_node
+ComfyUI-LaMA-Preprocessor    efficiency-nodes-comfyui-jags
+ComfyUI-Manager              stability-ComfyUI-nodes
+ComfyUI-PickScore-Nodes      was-node-suite-comfyui
+ComfyUI-Portrait-Maker
+comfyui_controlnet_aux
+ComfyUI_IPAdapter_plus
