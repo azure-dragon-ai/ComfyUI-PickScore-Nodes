@@ -73,3 +73,16 @@ File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\torchvision\transforms
 img = t(img)
 File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\hpsv2\src\open_clip\transform.py", line 56, in _convert_to_rgb_or_rgba
 return image.convert('RGB')
+
+Error occurred when executing HaojihuiHPSv2ImageProcessor:
+
+'numpy.ndarray' object is not callable
+
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 154, in recursive_execute
+output_data, output_ui = get_output_data(obj, input_data_all)
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 84, in get_output_data
+return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 77, in map_node_over_list
+results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+File "C:\Work\SD-ComfyUI\ComfyUI\custom_nodes\ComfyUI-HPSv2-Nodes\hpsv2.py", line 71, in process
+image = Image.fromarray(numpy())
