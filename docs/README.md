@@ -8,7 +8,7 @@ https://pypi.org/simple
 
 ```python
 numpy = tensor.numpy()
-image = Image.fromarray(numpy())
+image = Image.fromarray(numpy)
 
 transform = torchvision.transforms.Compose([  
     transforms.ToTensor()])  
