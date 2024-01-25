@@ -273,3 +273,11 @@ ERROR:root:Traceback (most recent call last):
     if text.strip() == '':
 AttributeError: 'numpy.float16' object has no attribute 'strip'
 
+got prompt
+ERROR:root:Failed to validate prompt for output 50:
+ERROR:root:* IPAdapterApplyEncoded 14:
+ERROR:root:  - Required input is missing: start_at
+ERROR:root:  - Required input is missing: end_at
+ERROR:root:  - Required input is missing: unfold_batch
+ERROR:root:Output will be ignored
+invalid prompt: {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation', 'details': '', 'extra_info': {}}
