@@ -206,3 +206,20 @@ ERROR:root:Traceback (most recent call last):
   File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\torchvision\transforms\functional.py", line 274, in to_pil_image
     raise ValueError(f"pic should not have > 4 channels. Got {pic.shape[-3]} channels.")
 ValueError: pic should not have > 4 channels. Got 768 channels.
+
+torch.Size([1, 768, 576, 3])
+ERROR:root:!!! Exception during processing !!!
+ERROR:root:Traceback (most recent call last):
+  File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 154, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 84, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 77, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "C:\Work\SD-ComfyUI\ComfyUI\custom_nodes\ComfyUI-HPSv2-Nodes\hpsv2.py", line 77, in process
+    imageTensor = transforms.ToTensor()(images)
+  File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\torchvision\transforms\transforms.py", line 137, in __call__
+    return F.to_tensor(pic)
+  File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\torchvision\transforms\functional.py", line 140, in to_tensor
+    raise TypeError(f"pic should be PIL Image or ndarray. Got {type(pic)}")
+TypeError: pic should be PIL Image or ndarray. Got <class 'torch.Tensor'>
