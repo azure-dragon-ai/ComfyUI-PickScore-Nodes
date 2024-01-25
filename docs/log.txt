@@ -223,3 +223,22 @@ ERROR:root:Traceback (most recent call last):
   File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\torchvision\transforms\functional.py", line 140, in to_tensor
     raise TypeError(f"pic should be PIL Image or ndarray. Got {type(pic)}")
 TypeError: pic should be PIL Image or ndarray. Got <class 'torch.Tensor'>
+
+Error occurred when executing HaojihuiHPSv2ImageScore:
+
+permute(sparse_coo): number of dimensions in the tensor input does not match the length of the desired ordering of dimensions i.e. input.dim() = 2 is not equal to len(dims) = 3
+
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 154, in recursive_execute
+output_data, output_ui = get_output_data(obj, input_data_all)
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 84, in get_output_data
+return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+File "c:\Work\SD-ComfyUI\ComfyUI\execution.py", line 77, in map_node_over_list
+results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+File "C:\Work\SD-ComfyUI\ComfyUI\custom_nodes\ComfyUI-HPSv2-Nodes\hpsv2.py", line 141, in imageScore
+outputs = model(image_inputs, text_inputs)
+File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+return forward_call(*args, **kwargs)
+File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\hpsv2\src\open_clip\model.py", line 248, in forward
+text_features = self.encode_text(text, normalize=True)
+File "c:\Work\SD-ComfyUI\python_embeded\lib\site-packages\hpsv2\src\open_clip\model.py", line 238, in encode_text
+x = x.permute(1, 0, 2) # NLD -> LND
