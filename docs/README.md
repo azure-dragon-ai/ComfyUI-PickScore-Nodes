@@ -11,6 +11,7 @@ set HPS_ROOT=c:\Work\AI-Service\Score\HPSv2\HPSv2Models
 ```
 
 ```python
+# Opencv读入的是 h w c 其中w是宽，h是高，c是通道数
 numpy = tensor.numpy()
 image = Image.fromarray(numpy)
 
