@@ -14,6 +14,12 @@ transformers                 4.34.1
 
 https://github.com/azure-dragon-ai/ComfyUI-ClipScore-Nodes
 https://gitee.com/luomor/ComfyUI-ClipScore-Nodes
+
+pip install git+https://gitee.com/xdjiangkai/CLIP
+pip install clip-score
+
+pip install git+https://gitee.com/xdjiangkai/CLIP -i https://pypi.douban.com/simple/
+pip install clip-score -i https://pypi.douban.com/simple/
 ```
 
 ```python
