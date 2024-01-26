@@ -11,6 +11,9 @@ set HPS_ROOT=c:\Work\AI-Service\Score\HPSv2\HPSv2Models
 
 pip install transformers==4.25.1
 transformers                 4.34.1
+
+https://github.com/azure-dragon-ai/ComfyUI-ClipScore-Nodes
+https://gitee.com/luomor/ComfyUI-ClipScore-Nodes
 ```
 
 ```python
